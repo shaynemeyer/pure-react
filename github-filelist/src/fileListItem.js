@@ -4,14 +4,16 @@ import FileIcon from './fileIcon';
 import CommitMessage from './commitMessage';
 
 function getFileName(file) {
-	return [
-		<FileIcon
-			file={file}
-			key={0} />,
-		<td className="file-name" key={1}>
-			{file.name}
-		</td>
-	];
+	return (
+		<div className="col-sm-4 file-name" key={1}>
+			<FileIcon
+				file={file}
+				key={0} />
+			<span>
+				{file.name}
+			</span>
+		</div>
+	);
 }
 
 let FileListItem = React.createClass({
@@ -21,13 +23,13 @@ let FileListItem = React.createClass({
 	render() {
 		var {file} = this.props;
 		return (
-			<tr className="file-list-item">
+			<div className="row file-list-item">
 				{getFileName(file)}
 				<CommitMessage commit={file.latestCommit} />
-				<td className="age">
+				<div className="col-sm-4 age">
 					<Time time={file.updated_at}/>
-				</td>
-			</tr>
+				</div>
+			</div>
 		);
 	}
 });

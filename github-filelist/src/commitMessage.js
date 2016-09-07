@@ -2,9 +2,9 @@ import React from 'react';
 
 function CommitMessage({commit}) {
 	return (
-		<td className="commit-message">
+		<div className="col-sm-4 commit-message">
 			{commit.message}
-		</td>
+		</div>
 	);
 }
 

@@ -6,9 +6,9 @@ function FileIcon({file}) {
 		icon = 'fa-folder';
 	}
 	return (
-		<td className="file-icon">
+		<span className="file-icon">
 			<i className={`fa ${icon}`}/>
-		</td>
+		</span>
 	);
 }
 

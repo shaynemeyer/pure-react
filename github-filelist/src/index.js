@@ -10,15 +10,13 @@ let FileList = React.createClass({
   render() {
     let files = this.props.files;
     return (
-      <table className="file-list">
-        <tbody>
+      <div className="file-list">
         {files.map(file => (
           <FileListItem
             key={file.id}
             file={file}/>
         ))}
-        </tbody>
-      </table>
+      </div>
     );
   }
 });

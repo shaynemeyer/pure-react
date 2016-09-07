@@ -1,0 +1,26 @@
+.envelope {
+  border: 1px solid black;
+  width: 600px;
+  height: 250px;
+}
+
+.from-address {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.to-address {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.address-label {
+  width: 200px;
+  font-family: "Helvetica", Arial;
+}
+
+.stamp {
+  margin: 5px 5px 0 0;
+  float: right;
+}

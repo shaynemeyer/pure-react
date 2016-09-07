@@ -5,7 +5,7 @@ import './index.css';
 var Footer = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="modal-footer">
         {this.props.children}
       </div>
     );
@@ -15,7 +15,7 @@ var Footer = React.createClass({
 var Body = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="modal-body">
         {this.props.children}
       </div>
     );
@@ -25,7 +25,7 @@ var Body = React.createClass({
 var Title = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="modal-header">
         {this.props.children}
       </div>
     )
@@ -35,7 +35,7 @@ var Title = React.createClass({
 var Dialog = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="modal-content">
         <Title>
           This is Important
         </Title>

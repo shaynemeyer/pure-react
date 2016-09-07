@@ -5,9 +5,7 @@ import './index.css';
 var NavItem = React.createClass({
   render: function () {
     return (
-      <div>
-        <a href={this.props.url}>{this.props.children}</a>
-      </div>
+      <a href={this.props.url}>{this.props.children}</a>
     )
   }
 });

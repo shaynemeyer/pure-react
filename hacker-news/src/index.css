@@ -1,0 +1,52 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.head-nav {
+  background-color: #ff6600;
+  color: black;
+}
+
+
+.title {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #828282;
+}
+
+.subtext {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 7pt;
+  color: #828282;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:visited {
+  color: #828282;
+  text-decoration: none;
+}
+
+.votearrow {
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  margin: 3px 2px 6px;
+}
+
+.votelinks {
+
+}
+
+.rank {
+
+}

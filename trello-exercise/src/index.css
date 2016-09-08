@@ -5,7 +5,8 @@ body {
 }
 
 .wrapper {
-  width: 900px;
+  padding-left: 20px;
+  width: 600px;
   margin: 20px auto;
   color: dimgray;
 }
@@ -19,9 +20,18 @@ body {
   padding: 2px 5px;
 }
 
+.box-wrapper .row {
+  margin-bottom: 10px;
+}
+
 .swimlane-title {
   font-weight: 900;
   font-size: 16px;
+}
+
+.more-actions {
+  margin-top: -2px;
+  margin-right: 15px;
 }
 
 .more-actions a{
@@ -30,4 +40,12 @@ body {
 
 .box-footer {
   color: darkgray;
+}
+
+.panel-body {
+  padding: 7px;
+}
+
+.panel {
+  margin-bottom: 10px;
 }

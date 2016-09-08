@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 20px auto;
+  color: dimgray;
+}
+
+.trello-box {
+  width: 300px;
+  padding: 5px;
+}
+
+.box-wrapper {
+  padding: 2px 5px;
+}
+
+.swimlane-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.more-actions a{
+  font-size: 16px;
+}
+
+.box-footer {
+  color: darkgray;
+}

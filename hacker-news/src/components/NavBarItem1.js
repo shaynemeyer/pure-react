@@ -8,7 +8,7 @@ let NavBarItem = React.createClass({
 			<span className="nav-item">
 				<span>{navText}</span>
 
-				{(!isLast) ? '<span className="nav-seperator">|</span>' : ''}
+				{(isLast==='false') ? <span className="nav-seperator">|</span> : ''}
 
 			</span>
 		);

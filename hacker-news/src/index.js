@@ -11,7 +11,6 @@ let HackerNews = React.createClass({
         <NavBar/>
         <Articles/>
       </div>
-
     )
   }
 });

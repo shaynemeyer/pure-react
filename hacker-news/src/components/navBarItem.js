@@ -2,10 +2,14 @@ import React from 'react';
 
 let NavBarItem = React.createClass({
 	render: function () {
+		let {navText,isLast} = this.props;
+
 		return (
 			<span className="nav-item">
-				<span>{this.props.navText}</span>
-				<span className="nav-seperator">|</span>
+				<span>{navText}</span>
+
+				{(!isLast) ? '<span className="nav-seperator">|</span>' : ''}
+
 			</span>
 		);
 	}

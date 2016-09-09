@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBarItem from './navBarItem';
+import NavBarItem from './NavBarItem';
 import logo from '../images/y18.gif';
 
 let NavBar = React.createClass({
 	render: function () {
 		return (
-			<div>
+			<div className="head-nav">
 				<img src={logo} alt="Y combinator" />
 				<span className="navbar-title">Hacker News</span>
 				<NavBarItem navText="new" isLast="false"/>

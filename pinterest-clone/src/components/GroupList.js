@@ -8,6 +8,9 @@ let GroupList = React.createClass({
 				<GroupItem />
 				<GroupItem />
 				<GroupItem />
+				<GroupItem />
+				<GroupItem />
+				<GroupItem />
 			</div>
 		);
 	}

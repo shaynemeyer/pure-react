@@ -13,9 +13,9 @@ let GroupList = React.createClass({
 				           imgSrc="pinterest-exceptional.png"/>
 				<GroupItem itemText="AEROSPACE"
 				           imgSrc="pinterest-aerospace.png"/>
-				<GroupItem itemText="WHEN FLYING WAS WORTH IT"
+				<GroupItem itemText="WHEN FLYING WAS..."
 				           imgSrc="pinterest-when.png"/>
-				<GroupItem itemText="Aircraft Recycled into Furniture"
+				<GroupItem itemText="Recycled into Furniture"
 				           imgSrc="pinterest-recycled.png"/>
 			</div>
 		);

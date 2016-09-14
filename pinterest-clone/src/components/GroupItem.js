@@ -2,14 +2,22 @@ import React from 'react';
 
 let GroupItem = React.createClass({
 	render: function () {
-		//let imgSrc = `images/${this.props.imgSrc}`;
+		function getImage(imageName) {
+			console.log(imageName)
+			return require("../images/imgSrc/"+imageName);
+		}
+
+		let imgSrc = getImage(this.props.imgSrc);
+
 		return (
-			<div className="well well-sm group-item col-sm-4">
+			<div className="well well-sm group-item">
 				<div className="item-title">
 					{this.props.itemText}
 				</div>
-				<img src={this.props.imgSrc} alt={this.props.itemText} />
-
+				<img src={imgSrc} alt={this.props.itemText} />
+				<div className="follow">
+					<button className="btn btn-default btn-block">Follow</button>
+				</div>
 			</div>
 		);
 	}

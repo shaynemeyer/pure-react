@@ -61,11 +61,22 @@ body {
   margin: 0 auto;
 }
 
+.follow button {
+  margin-top: 5px;
+  color: darkred;
+}
+
 .group-item {
   margin: 5px;
   width: 250px;
+  display: inline-block;
 }
 
 .group-item img {
   width: 230px;
+}
+
+.group-item .item-title {
+  font-weight: 900;
+  font-size: 18px;
 }

@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 0
+      selectedTab: 0,
+      cart: []
     };
   }
 
@@ -18,11 +19,24 @@ class App extends Component {
     });
   }
 
+  handleAddToCart = (item) => {
+    this.setState({
+      cart: [
+        ...this.state.cart,
+        item.id
+      ]
+    });
+  }
+
   renderContent() {
     switch (this.state.selectedTab) {
       default:
       case 0:
-        return <ItemPage items={items}/> ;
+        return (
+          <ItemPage
+            items={items}
+            onAddToCart={this.handleAddToCart}/>
+        );
       case 1:
         return <span>Cart</span>;
     }
@@ -37,6 +51,9 @@ class App extends Component {
           selectedTab={selectedTab}
           onTabChange={this.selectedTab}/>
         <main className="App-content">
+          <div>
+            {this.state.cart.length} items
+          </div>
           {this.renderContent()}
         </main>
       </div>

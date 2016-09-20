@@ -29,6 +29,17 @@ class App extends Component {
     });
   }
 
+  handleRemoveOne = (item) => {
+    let {cart} = this.state;
+    let idx = cart.indexOf(item.id);
+    this.setState({
+      cart: [
+        ...cart.slice(0, idx),
+        ...cart.slice(idx+1)
+      ]
+    });
+  }
+
   renderContent() {
     switch (this.state.selectedTab) {
       default:
@@ -65,7 +76,10 @@ class App extends Component {
     });
 
     return (
-      <CartPage items={cartItems} />
+      <CartPage
+        items={cartItems}
+        onAddOne={this.handleAddToCart}
+        onRemoveOne={this.handleRemoveOne}/>
     );
   }
 

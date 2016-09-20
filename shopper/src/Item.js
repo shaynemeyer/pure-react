@@ -1,7 +1,7 @@
 import React from 'react';
 import './Item.css';
 
-let Item = ({item, onAddToCart}) => (
+let Item = ({item, children}) => (
   <div className="Item">
     <div className="Item-left">
       <div className="Item-image"></div>
@@ -16,18 +16,14 @@ let Item = ({item, onAddToCart}) => (
       <div className="Item-price">
         ${item.price}
       </div>
-      <button
-        className="Item-addToCart"
-        onClick={onAddToCart}>
-        Add to Cart
-      </button>
+      {children}
     </div>
   </div>
 );
 
 Item.propTypes = {
   item: React.PropTypes.object.isRequired,
-  onAddToCart: React.PropTypes.func.isRequired
+  children: React.PropTypes.node
 };
 
 export default Item;

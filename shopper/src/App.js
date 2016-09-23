@@ -79,7 +79,7 @@ class App extends Component {
       <CartPage
         items={cartItems}
         onAddOne={this.handleAddToCart}
-        onRemoveOne={this.handleRemoveOne}/>
+        onRemoveOne={this.handleRemoveOne} />
     );
   }
 
@@ -90,11 +90,9 @@ class App extends Component {
       <div className="App">
         <Nav
           selectedTab={selectedTab}
-          onTabChange={this.selectedTab}/>
+          onTabChange={this.selectedTab}
+          itemCount={this.state.cart.length}/>
         <main className="App-content">
-          <div>
-            {this.state.cart.length} items
-          </div>
           {this.renderContent()}
         </main>
       </div>

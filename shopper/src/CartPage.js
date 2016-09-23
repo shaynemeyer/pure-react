@@ -3,6 +3,11 @@ import Item from './Item';
 import './CartPage.css';
 
 function CartPage({items, onAddOne, onRemoveOne}) {
+
+	let total = items.reduce((total, item) => {
+		return total + (item.price * item.count)
+	}, 0);
+
 	return (
 		<ul className="CartPage-items">
 			{items.map(item =>
@@ -23,6 +28,9 @@ function CartPage({items, onAddOne, onRemoveOne}) {
 					</Item>
 				</li>
 			)}
+			<li id="cart-total" className="CartPage-item pull-right">
+				Total: ${total}
+			</li>
 		</ul>
 	);
 }

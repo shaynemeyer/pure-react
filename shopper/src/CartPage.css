@@ -17,3 +17,21 @@
 .CartItem-removeOne {
     border-right: none;
 }
+
+.CartPage-items {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.CartPage-item {
+    list-style: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+#cart-total {
+    padding: 10px;
+    font-weight: 900;
+}

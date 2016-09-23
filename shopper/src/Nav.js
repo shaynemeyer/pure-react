@@ -5,7 +5,8 @@ class Nav extends Component {
     // Add this line:
     let {
       selectedTab,
-      onTabChange
+      onTabChange,
+      itemCount
     } = this.props;
     return (
       <nav className="App-nav">
@@ -17,6 +18,9 @@ class Nav extends Component {
             <a onClick={onTabChange.bind(this, 1)}>Cart</a>
           </li>
         </ul>
+        <div className="CartCount">
+          <i className="fa fa-shopping-cart"></i> {itemCount} items ($0)
+        </div>
       </nav>
     );
   }
@@ -24,7 +28,8 @@ class Nav extends Component {
 
 Nav.propTypes = {
   selectedTab: React.PropTypes.number.isRequired,
-  onTabChange: React.PropTypes.func.isRequired
+  onTabChange: React.PropTypes.func.isRequired,
+  itemCount: React.PropTypes.number.isRequired
 }
 
 export default Nav;

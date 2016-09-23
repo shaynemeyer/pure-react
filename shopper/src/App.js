@@ -75,12 +75,21 @@ class App extends Component {
       }
     });
 
-    return (
-      <CartPage
+    let cartPageContent = <div className="cart-empty">
+      Your cart is empty.
+      <p>
+        Why not add some expensive products to it?
+      </p>
+    </div>;
+
+    if (cartItems.length > 0){
+      cartPageContent = <CartPage
         items={cartItems}
         onAddOne={this.handleAddToCart}
-        onRemoveOne={this.handleRemoveOne} />
-    );
+        onRemoveOne={this.handleRemoveOne} />;
+    }
+
+    return cartPageContent;
   }
 
   render() {

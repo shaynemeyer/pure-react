@@ -35,3 +35,11 @@
     padding: 10px;
     font-weight: 900;
 }
+
+.cart-empty {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    color: #555555;
+}

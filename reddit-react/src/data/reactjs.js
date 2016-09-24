@@ -1,4 +1,6 @@
-let reddit = {
+/* eslint-disable */
+
+let reddit = [
   "kind": "Listing",
   "data": {
     "modhash": "",
@@ -1793,6 +1795,6 @@ let reddit = {
     "after": "t3_53zqyx",
     "before": null
   }
-};
+];
 
 export {reddit};

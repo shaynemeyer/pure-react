@@ -6,7 +6,8 @@ class Nav extends Component {
     let {
       selectedTab,
       onTabChange,
-      itemCount
+      itemCount,
+      cartTotal
     } = this.props;
     return (
       <nav className="App-nav">
@@ -19,7 +20,9 @@ class Nav extends Component {
           </li>
         </ul>
         <div className="CartCount">
-          <i className="fa fa-shopping-cart"></i> {itemCount} items ($0)
+          <a className="cart-nav" onClick={onTabChange.bind(this, 1)}>
+            <i className="fa fa-shopping-cart"></i> {itemCount} items (${cartTotal})
+          </a>
         </div>
       </nav>
     );
@@ -29,7 +32,8 @@ class Nav extends Component {
 Nav.propTypes = {
   selectedTab: React.PropTypes.number.isRequired,
   onTabChange: React.PropTypes.func.isRequired,
-  itemCount: React.PropTypes.number.isRequired
+  itemCount: React.PropTypes.number.isRequired,
+  cartTotal: React.PropTypes.number.isRequired
 }
 
 export default Nav;

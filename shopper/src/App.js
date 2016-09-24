@@ -10,7 +10,8 @@ class App extends Component {
     super(props);
     this.state = {
       selectedTab: 0,
-      cart: []
+      cart: [],
+      cartTotal: 0,
     };
   }
 
@@ -25,18 +26,20 @@ class App extends Component {
       cart: [
         ...this.state.cart,
         item.id
-      ]
+      ],
+      cartTotal: this.state.cartTotal + item.price
     });
   }
 
   handleRemoveOne = (item) => {
-    let {cart} = this.state;
+    let {cart, cartTotal} = this.state;
     let idx = cart.indexOf(item.id);
     this.setState({
       cart: [
         ...cart.slice(0, idx),
         ...cart.slice(idx+1)
-      ]
+      ],
+      cartTotal:  cartTotal - item.price
     });
   }
 
@@ -100,7 +103,8 @@ class App extends Component {
         <Nav
           selectedTab={selectedTab}
           onTabChange={this.selectedTab}
-          itemCount={this.state.cart.length}/>
+          itemCount={this.state.cart.length}
+          cartTotal={this.state.cartTotal} />
         <main className="App-content">
           {this.renderContent()}
         </main>

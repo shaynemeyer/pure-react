@@ -8,8 +8,16 @@ class App extends Component {
     return (
       <ul className="ItemPage-items">
         {reddit.map(item =>
-          <li className="ItemPage-item">
-            {data}
+          <li className="ItemPage-item" key={item.data.id}>
+            {item.data.title}<br/>
+
+            ups: {item.data.ups} <br />
+
+            num of comments: {item.data.num_comments} <br />
+
+            created date: {item.data.created_utc} <br />
+
+            author: {item.data.author} <br />
           </li>
         )}
       </ul>

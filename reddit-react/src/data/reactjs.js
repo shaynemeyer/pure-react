@@ -1,10 +1,6 @@
 /* eslint-disable */
 
 let reddit = [
-  "kind": "Listing",
-  "data": {
-    "modhash": "",
-    "children": [
       {
         "kind": "t3",
         "data": {
@@ -1791,10 +1787,6 @@ let reddit = [
           "ups": 1
         }
       }
-    ],
-    "after": "t3_53zqyx",
-    "before": null
-  }
-];
+    ];
 
 export {reddit};

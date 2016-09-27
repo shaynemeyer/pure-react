@@ -1,0 +1,29 @@
+.item {
+    margin-bottom: 10px;
+}
+
+.item-arrows {
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.item-title {
+    color: #c05b4d;
+    font-size: 18px;
+}
+
+.item-subtitle {
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.item-author {
+    color: #4d5763;
+    padding-left: 10px;
+}
+
+a {
+    color: #b3b3b3;
+    padding: 0 1px;
+    text-decoration: none;
+}

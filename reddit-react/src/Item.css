@@ -1,15 +1,28 @@
 .item {
     margin-bottom: 10px;
+    height: 100%;
+    padding: 8px;
 }
 
 .item-arrows {
     color: #b3b3b3;
     font-size: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 65px;
+    margin-right: 20px;
+    margin-top: 5px;
+    vertical-align: top;
 }
 
-.item-title {
+.item-title a {
     color: #c05b4d;
     font-size: 18px;
+    width: 85%;
+}
+
+.comments {
+    color: #c05b4d;
 }
 
 .item-subtitle {
@@ -28,13 +41,15 @@ a {
     text-decoration: none;
 }
 
+.ups-count {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 900;
+    width: 20px;
+}
 .thumb {
     height: 64px;
     width: 64px;
-}
-
-.thumb-default {
-    background: url(images/icons-1-sprite.png) -143px -80px;
 }
 
 .default-circle {
@@ -45,6 +60,7 @@ a {
     font-weight: bold;
     font-size: 32px;
     width: 64px;
+    margin-top: -20px;
 }
 
 .default-circle span {
@@ -56,23 +72,17 @@ a {
     padding: 0 15px;
 }
 
-.item-arrows {
-    display: inline;
-    width: 20px;
-    height: 65px;
-    float: left;
-    margin-right: 20px;
-}
-
 .item-thumb-block {
     display: inline-block;
     width: 80px;
     height: 65px;
     margin-right: 7px;
+    vertical-align: top;
 }
 
 .item-text-block {
     display: inline-block;
+    width: 85%;
 }
 
 a:hover {

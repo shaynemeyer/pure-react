@@ -6,6 +6,16 @@ function computeTimeString(time) {
 	return moment(time*1000).fromNow();
 }
 
+function renderImage(thumb, url, altText){
+	if (thumb==='self'){
+		return (<a href={url} className="thumb thumb-default"><div className="default-circle"><span><i className="fa fa-wpforms"></i></span></div></a>)
+	} else if (thumb==='default') {
+		return (<a href={url} className="thumb thumb-default"><div className="default-circle"><span><i className="fa fa-globe"></i></span></div></a>)
+	} else {
+		return <a href={url}><img className="thumb" src={thumb} alt={altText} width="64" height="64" /></a>
+	}
+}
+
 let Item = ({itemData, children}) => (
 	<div className="item">
 		<div className="item-arrows">
@@ -19,19 +29,21 @@ let Item = ({itemData, children}) => (
 				<i className="fa fa-arrow-down"></i>
 			</div>
 		</div>
-		<div>
-			{itemData.thumbnail}
+		<div className="item-thumb-block">
+			{renderImage(itemData.thumbnail, itemData.url, itemData.title)}
 		</div>
-		<div className="item-title">{itemData.title}</div>
+		<div className="item-text-block">
+			<div className="item-title">{itemData.title}</div>
 
 
-		<div className="item-subtitle">
-			created date: {computeTimeString(itemData.created)}
+			<div className="item-subtitle">
+				Submitted {computeTimeString(itemData.created)} by
 
-			<span className="item-author">{itemData.author}</span>
-		</div>
-		<div className="item-comment-row">
-			<a href="">comment</a> <a href="#">share</a> <a href="#">save</a> <a href="#">hide</a> <a href="#">report</a> <a href="#">pocket</a>
+				<span className="item-author">{itemData.author}</span>
+			</div>
+			<div className="item-comment-row">
+				<a href="">comment</a> <a href="#">share</a> <a href="#">save</a> <a href="#">hide</a> <a href="#">report</a> <a href="#">pocket</a>
+			</div>
 		</div>
 	</div>
 );

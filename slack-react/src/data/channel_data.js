@@ -1,4 +1,4 @@
-let channel = [
+let channels = [
   {
     user_id: 1,
     user_name: "Dave",
@@ -43,4 +43,4 @@ let channel = [
   }
 ];
 
-export {channel};
+export {channels};

@@ -1,0 +1,26 @@
+.pick-placeholder {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: inline-block;
+}
+
+.item-data {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.list-item {
+    margin-bottom: 5px;
+}
+
+.user-name {
+    font-weight: 900;
+}
+
+.date-created {
+    color: lightgray;
+}

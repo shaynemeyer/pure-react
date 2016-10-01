@@ -1,5 +1,6 @@
 import React from 'react';
 import {channels} from "../data/channel_data";
+import './Converstations.css';
 
 function Conversations(){
   return (
@@ -7,8 +8,15 @@ function Conversations(){
       <ul>
         {channels.map(item =>
           <li className="list-item" key={item.user_id}>
-            <div>{item.user_name} {item.date} </div>
-            <div>{item.message}</div>
+            <div className="pick-placeholder">
+
+            </div>
+            <div className="item-data">
+              <div>
+                <span className="user-name">{item.user_name}</span> <span className="date-created">{item.date}</span> </div>
+              <div>{item.message}</div>
+            </div>
+
           </li>
         )}
       </ul>

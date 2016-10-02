@@ -1,14 +1,14 @@
 import React from 'react';
 import {channels} from "../data/channels";
 
-function Channel() {
+let Channel = ({onChannelChange, selectedChannel}) => {
   return (
     <div>
       <h2>CHANNELS</h2>
       <ul>
       {channels.map(item =>
-        <li className="list-item" key={item.id}>
-          # {item.name}
+        <li key={item.id} className={`list-item${selectedChannel === item.id ? ' selected' : ''}`}>
+          # <a onClick={onChannelChange.bind(this, item.id)}>{item.name}</a>
         </li>
       )}
       </ul>

@@ -11,7 +11,7 @@ let channels = [
     id: 2,
     user_id: 2,
     user_name: "Sarah",
-    channel: 1,
+    channel: 3,
     date: "WED JUL 27 2016 22:15:06 GMT-0400(EDT)",
     message: "A message from Sarah"
   },
@@ -35,7 +35,7 @@ let channels = [
     id: 5,
     user_id: 5,
     user_name: "Erin",
-    channel: 1,
+    channel: 3,
     date: "WED JUL 27 2016 22:15:06 GMT-0400(EDT)",
     message: "A message from Erin"
   },
